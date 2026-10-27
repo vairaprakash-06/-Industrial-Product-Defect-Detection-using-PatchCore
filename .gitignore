@@ -1,0 +1,24 @@
+# Python bytecode and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+ENV/
+
+# Large raw dataset archives (Download via: python src/download_mvtec.py --category bottle)
+data/mvtec/
+
+# Output predictions & generated inspection results
+outputs/*
+!outputs/.gitkeep
+
+# OS and Editor metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

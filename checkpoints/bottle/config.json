@@ -1,0 +1,13 @@
+{
+  "category": "bottle",
+  "backbone": "resnet18",
+  "train_samples": 209,
+  "coreset_ratio": 0.02,
+  "coreset_bank_size": 3277,
+  "feature_dim": 384,
+  "feat_shape": [
+    28,
+    28
+  ],
+  "train_duration_sec": 27.61
+}

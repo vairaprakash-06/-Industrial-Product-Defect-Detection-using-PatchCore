@@ -1,0 +1,30 @@
+dataset:
+  name: "mvtec_ad"
+  category: "metal_nut"
+  data_dir: "data/mvtec"
+  img_size: 224
+  crop_size: 224
+  batch_size: 16
+  num_workers: 0
+
+model:
+  name: "patchcore"
+  backbone: "resnet18"
+  layers:
+    - "layer2"
+    - "layer3"
+  patch_size: 3
+  patch_stride: 1
+  coreset_sampling_ratio: 0.02
+  project_dim: 128
+  device: "auto"
+
+evaluation:
+  sigma: 4.0
+  n_neighbors: 9
+  calc_pixel_auroc: true
+
+checkpoints:
+  checkpoint_dir: "checkpoints/metal_nut"
+  model_filename: "patchcore_metal_nut.pt"
+  metrics_filename: "metrics.json"

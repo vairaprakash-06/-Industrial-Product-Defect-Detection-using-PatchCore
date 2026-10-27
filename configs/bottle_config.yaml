@@ -1,0 +1,30 @@
+dataset:
+  name: "mvtec_ad"
+  category: "bottle"
+  data_dir: "data/mvtec"
+  img_size: 224
+  crop_size: 224
+  batch_size: 16
+  num_workers: 0
+
+model:
+  name: "patchcore"
+  backbone: "resnet18"
+  layers:
+    - "layer2"
+    - "layer3"
+  patch_size: 3
+  patch_stride: 1
+  coreset_sampling_ratio: 0.02  # 2% coreset subsampling (~3,200 representative patch tokens)
+  project_dim: 128              # Dimension for Johnson-Lindenstrauss random projection
+  device: "auto"                # "auto", "cuda", or "cpu"
+
+evaluation:
+  sigma: 4.0                    # Gaussian filter standard deviation for anomaly heatmap smoothing
+  n_neighbors: 9                # Nearest neighbors for neighborhood reweighting (Roth et al.)
+  calc_pixel_auroc: true
+
+checkpoints:
+  checkpoint_dir: "checkpoints/bottle"
+  model_filename: "patchcore_bottle.pt"
+  metrics_filename: "metrics.json"

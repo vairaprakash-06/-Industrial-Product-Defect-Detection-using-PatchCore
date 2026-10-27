@@ -1,0 +1,50 @@
+{
+  "category": "bottle",
+  "test_samples": 83,
+  "normal_samples": 20,
+  "anomalous_samples": 63,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9601,
+  "optimal_threshold": 1.7757,
+  "f1_score": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "specificity": 1.0,
+  "confusion_matrix": {
+    "tp": 63,
+    "fp": 0,
+    "tn": 20,
+    "fn": 0
+  },
+  "average_inference_ms": 93.72,
+  "defect_breakdown": {
+    "broken_large": {
+      "sample_count": 20,
+      "accuracy": 1.0,
+      "mean_anomaly_score": 3.294,
+      "min_score": 2.6911,
+      "max_score": 3.7281
+    },
+    "broken_small": {
+      "sample_count": 22,
+      "accuracy": 1.0,
+      "mean_anomaly_score": 3.2111,
+      "min_score": 2.2323,
+      "max_score": 3.9632
+    },
+    "contamination": {
+      "sample_count": 21,
+      "accuracy": 1.0,
+      "mean_anomaly_score": 2.847,
+      "min_score": 1.7757,
+      "max_score": 3.8998
+    },
+    "good": {
+      "sample_count": 20,
+      "accuracy": 1.0,
+      "mean_anomaly_score": 1.316,
+      "min_score": 1.2081,
+      "max_score": 1.4452
+    }
+  }
+}
